@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% if title %}
+    <title>Django Website - {{ title }}</title>
+    {% else %}
+    <title>Django Website</title>
+    {% endif %}
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'home/style.css' %}?v=1.2">
+    <link rel="stylesheet" href="{% static 'users/style.css' %}?v=1.2">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+
+        <h2 class="logo"><a href="{% url 'blog-home' %}">My Blog</a></h2>
+
+        <ul class="nav-links">
+            <li><a href="{% url 'blog-home' %}">Home</a></li>
+            <li><a href="{% url 'blog-about' %}">About</a></li>
+            <li><a href="{% url 'blog-contact' %}">Contact</a></li>
+        </ul>
+
+        <div class="auth-buttons">
+            {% if user.is_authenticated %}
+            <a href="{% url 'create-post' %}" class="login-btn">Create Post</a>
+            <a href="{% url 'profile' %}" class="login-btn">Profile</a>
+            <a href="{% url 'logout' %}" class="login-btn">Logout</a>
+            {% else %}
+            <a href="{% url 'login' %}" class="login-btn">Login</a>
+            <a href="{% url 'register' %}" class="register-btn">Register</a>
+            {%endif%}
+        </div>
+
+    </nav>
+    <!-- Main Layout -->
+    <div class="container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h3>Categories</h3>
+            <ul>
+                <li>Technology</li>
+                <li>Programming</li>
+                <li>Django</li>
+                <li>Python</li>
+                <li>AI</li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+            {%if messages %}
+            {% for message in messages %}
+            <div class="message-alert {{ message.tags }}">
+                {{ message }}
+            </div>
+            {% endfor %}
+            {% endif %}
+            {% block content %}
+            {% endblock %}
+        </main>
+
+    </div>
+
+    <footer>
+        © 2026 My Blog
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+{% extends 'home/base.html' %}
+
+{% block content %}
+<div class="delete-card">
+    <form method="post">
+        {% csrf_token %}
+        <h2 class="delete-title">Delete Post</h2>
+        <p class="delete-text">Are you sure you want to delete the post "<strong>{{ object.title }}</strong>"? This action cannot be undone.</p>
+        
+        <div class="delete-btn-group">
+            <button class="btn-delete-confirm btn-danger" type="submit">Yes, Delete</button>
+            <a class="btn-delete-confirm btn-secondary" href="{% url 'post-detail' object.id %}">Cancel</a>
+        </div>
+    </form>
+</div>
+{% endblock %}

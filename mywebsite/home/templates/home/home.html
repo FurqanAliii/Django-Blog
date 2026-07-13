@@ -1,0 +1,46 @@
+{% extends 'home/base.html' %}
+
+{% block content %}
+{%for post in posts %}
+<div class="post-card">
+    <h2> <a class='header-link' href="{% url 'post-detail' post.id  %}">{{ post.title }}</a></h2>
+    <p>{{post.content}}</p>
+
+    <p  class="author" >
+        <a href="{% url 'user-blog-home' post.author.username %}">By {{ post.author }}</a>
+    </p>
+
+    <p class="date">
+        {{ post.date_posted|date:'F d Y' }}
+    </p>
+</div>
+
+{% endfor %}
+    {% if is_paginated %}
+
+        {% if page_obj.has_previous %}
+        <a class="btn-delete-confirm btn-secondary" href="?page=1"> &laquo;  First</a>
+        <a class="btn-delete-confirm btn-secondary" href="?page={{page_obj.previous_page_number}}"> Previous</a>
+        {% endif %}
+        <span class="current">
+            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+        </span>
+
+        {% if page_obj.has_next %}
+        <a class="btn-delete-confirm btn-secondary" href="?page={{ page_obj.next_page_number }}">next</a>
+        <a class="btn-delete-confirm btn-secondary" href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+        {% endif %}
+
+    {% endif %}
+{% endblock %}
+
+<!-- <h1>{{ name }}</h1>
+<h2>{{class}}</h2>
+<h3>{{RollNo}}</h3>
+<ul>
+    {% for course in courses %}
+    <li>{{course}}</li>
+    {%empty%}
+    <li>No Student found</li>
+    {%endfor%}
+</ul> -->

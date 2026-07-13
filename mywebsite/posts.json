@@ -1,0 +1,42 @@
+[
+    {
+        "title": "Getting Started with Django: A Beginner's Guide",
+        "content": "Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design. Built by experienced developers, it takes care of much of the hassle of web development, so you can focus on writing your app without needing to reinvent the wheel. In this post, we explore how to start your first Django project, understand the MVT architecture, and write your first view.",
+        "user_id": 7
+    },
+    {
+        "title": "Mastering CSS Grid and Flexbox",
+        "content": "CSS layout systems have evolved incredibly over the last decade. Today, Grid and Flexbox are the two standard pillars of modern layout design. Flexbox is designed for one-dimensional layouts (either a row or a column), while Grid is built for two-dimensional layouts (both rows and columns simultaneously). Combining them allows you to build highly complex, responsive web designs with very little CSS.",
+        "user_id": 7
+    },
+    {
+        "title": "The Rise of Generative AI in Software Development",
+        "content": "Generative AI is changing how programmers write code, debug systems, and build software. Tools like GitHub Copilot, ChatGPT, and Claude are helping developers write code faster, generate unit tests, and translate code between programming languages. In this article, we look at the benefits, potential pitfalls, and best practices for incorporating AI assistants into your daily coding workflow.",
+        "user_id": 7
+    },
+    {
+        "title": "Understanding Python's Decorators",
+        "content": "Decorators are one of the most powerful and elegant features of Python. In simple terms, a decorator is a function that takes another function as an argument, extends its behavior without modifying it, and returns the modified function. They are widely used in frameworks like Django (e.g., @login_required) and Flask for routing, authentication, and logging.",
+        "user_id": 7
+    },
+    {
+        "title": "Getting Started with Django: A Beginner's Guide",
+        "content": "Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design. Built by experienced developers, it takes care of much of the hassle of web development, so you can focus on writing your app without needing to reinvent the wheel. In this post, we explore how to start your first Django project, understand the MVT architecture, and write your first view.",
+        "user_id": 7
+    },
+    {
+        "title": "Mastering CSS Grid and Flexbox",
+        "content": "CSS layout systems have evolved incredibly over the last decade. Today, Grid and Flexbox are the two standard pillars of modern layout design. Flexbox is designed for one-dimensional layouts (either a row or a column), while Grid is built for two-dimensional layouts (both rows and columns simultaneously). Combining them allows you to build highly complex, responsive web designs with very little CSS.",
+        "user_id": 7
+    },
+    {
+        "title": "The Rise of Generative AI in Software Development",
+        "content": "Generative AI is changing how programmers write code, debug systems, and build software. Tools like GitHub Copilot, ChatGPT, and Claude are helping developers write code faster, generate unit tests, and translate code between programming languages. In this article, we look at the benefits, potential pitfalls, and best practices for incorporating AI assistants into your daily coding workflow.",
+        "user_id": 7
+    },
+    {
+        "title": "Understanding Python's Decorators",
+        "content": "Decorators are one of the most powerful and elegant features of Python. In simple terms, a decorator is a function that takes another function as an argument, extends its behavior without modifying it, and returns the modified function. They are widely used in frameworks like Django (e.g., @login_required) and Flask for routing, authentication, and logging.",
+        "user_id": 7
+    }
+]
