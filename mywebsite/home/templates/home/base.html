@@ -26,15 +26,22 @@
             <li><a href="{% url 'blog-contact' %}">Contact</a></li>
         </ul>
 
-        <div class="auth-buttons">
-            {% if user.is_authenticated %}
-            <a href="{% url 'create-post' %}" class="login-btn">Create Post</a>
-            <a href="{% url 'profile' %}" class="login-btn">Profile</a>
-            <a href="{% url 'logout' %}" class="login-btn">Logout</a>
-            {% else %}
-            <a href="{% url 'login' %}" class="login-btn">Login</a>
-            <a href="{% url 'register' %}" class="register-btn">Register</a>
-            {%endif%}
+        <div class="navbar-actions">
+            <div class="auth-buttons">
+                {% if user.is_authenticated %}
+                <a href="{% url 'create-post' %}" class="login-btn">Create Post</a>
+                <a href="{% url 'profile' %}" class="login-btn">Profile</a>
+                <a href="{% url 'logout' %}" class="login-btn">Logout</a>
+                {% else %}
+                <a href="{% url 'login' %}" class="login-btn">Login</a>
+                <a href="{% url 'register' %}" class="register-btn">Register</a>
+                {%endif%}
+            </div>
+
+            <form method="GET" action="{% url 'blog-home' %}" class="search-form">
+                <input type="text" name="q" placeholder="Search posts">
+                <button type="submit">Search</button>
+            </form>
         </div>
 
     </nav>

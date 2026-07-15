@@ -62,6 +62,12 @@ class HomeView(ListView):
     ordering=['-date_posted']
     paginate_by=4
 
+    def get_queryset(self):
+       query = self.request.GET.get('q')
+       if query:
+           return Post.objects.filter(title__icontains=query).order_by('-date_posted')
+       return Post.objects.all().order_by('-date_posted')
+
 
 
 class UserHomeView(ListView):
